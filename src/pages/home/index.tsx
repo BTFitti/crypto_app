@@ -27,6 +27,7 @@ export function Home() {
   const [input, setInput] = useState("");
   const [coins, setCoins] = useState<CoinProps[]>([]);
   const [offset, setOffset] = useState(0)
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -59,6 +60,7 @@ export function Home() {
         });
         const listCoins = [...coins, ...formatedResult]
         setCoins(listCoins);
+        setLoading(false)
       });
   }
 
@@ -74,8 +76,13 @@ export function Home() {
     }
     setOffset(offset + 10)
   }
-
- 
+  if(loading || !coins){
+    return(
+      <div className={styles.container}>
+        <h2 className={styles.center}>Carregando detalhes...</h2>
+      </div>
+    )
+  }
 
   return (
     <main className={styles.container}>

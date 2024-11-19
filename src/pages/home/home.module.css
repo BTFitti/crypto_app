@@ -1,5 +1,10 @@
 .container {
   margin: 0 14px;
+  color:  #fff;
+}
+.center{
+  text-align: center;
+  margin-bottom: 14px;
 }
 .form {
   width: 100%;
@@ -67,6 +72,10 @@ table td {
   color: #fff;
   margin: 14px 0;
   border-radius: 8px;
+  transition: .6s ease-in-out;
+}
+.buttonMore:hover{
+  background-color: #24769c ;
 }
 .logo {
   width: 20px;
