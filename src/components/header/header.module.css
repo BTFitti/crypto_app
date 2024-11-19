@@ -1,0 +1,12 @@
+/*
+CSS escopado, ele só vai funcionar no escopo do componente (Header).
+As classes só vão ser utilizadas e aplicadas no componente header, se a minha home tivesse uma classe .home e
+eu também tivesse uma classe .home no header, o css só vai aplicar no header porque é escopado, por causa do "module" no nome da classe .CSS
+*/
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    max-width: 1080px;
+}
