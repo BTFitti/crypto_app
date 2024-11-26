@@ -34,7 +34,7 @@ export function Home() {
     getData();
   }, [offset]);
   async function getData() {
-    //offset é tipo um corte, aqui no caso começa pelo objeto 0 do array, se fosse 10 começaria pelo obj 10 do array
+   
     fetch(`https://api.coincap.io/v2/assets?limit=10&offset=${offset}`)
       .then((response) => response.json())
       .then((data: DataProps) => {
@@ -65,7 +65,7 @@ export function Home() {
   }
 
   function handleSubmit(e: FormEvent) {
-    e.preventDefault(); //previnir o reload da página
+    e.preventDefault(); 
     if (input === "") return;
     navigate(`/detail/${input}`);
   }
